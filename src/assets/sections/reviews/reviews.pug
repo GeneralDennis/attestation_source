@@ -1,0 +1,21 @@
+.reviews
+  h2.reviews-title
+    | Оставьте отзыв о вашем использовании!
+  form.reviews-form
+    .reviews-form__text
+      textarea.reviews-form__textarea
+      .reviews-form__textarea-placeholder
+        | Напишите ваш отзыв...
+    .reviews-footer
+      .form-files
+        .reviews-form__file
+          input#myfile.reviews-form__input(type='file' multiple="multiple")
+          label.reviews-form__label(for='myfile')
+          .reviews-form__placeholder.reviews-form__placeholder--show
+            | Прикрепить файлы
+            span.reviews-form__explain-text
+              | Jpg, png, gif, mp4 не более 15 Мб
+          span.reviews-form__placeholder.reviews-form__placeholder--more.reviews-form__placeholder
+            | Загрузить еще
+      button.reviews-form__button(type='submit')
+        | Отправить отзыв

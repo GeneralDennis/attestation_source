@@ -1,0 +1,49 @@
+.user
+  display: none
+  position: absolute
+  top: 87px
+  right: 80px
+  min-height: 180px
+  min-width: 200px
+  width: 100px
+  padding: 16px 20px 18px 20px
+  background: #fff
+  border: 1px solid #CDD3DB
+  border-bottom-right-radius: 5px
+  border-bottom-left-radius: 5px
+  z-index: 5
+  &::before
+    content: ''
+    position: absolute
+    height: 15px
+    width: 26px
+    top: -13px
+    right: 28px
+    background: url('/assets/sections/images/triangle.svg') no-repeat
+
+  &-main
+    margin-bottom: 15px
+  &-link
+    display: block
+    margin-bottom: 11px
+    text-decoration: none
+    color: #212121
+    font-size: 14px
+    line-height: 17px
+    &:last-child
+      margin-bottom: 0
+    &__logout
+      margin-bottom: 0
+      color: #93979B
+    &__
+  &-footer
+    position: relative
+    padding-top: 12px
+    &::before
+      content: ''
+      position: absolute
+      height: 1px
+      width: 100%
+      top: 0
+      margin-bottom: 11px
+      background: #CDD3DB

@@ -1,0 +1,30 @@
+//- .header-container.container
+header.header
+  .container
+    .header-l
+      a.header-logo(href='/')
+      nav.header-l__nav
+        ul.menu.header-l__nav-menu
+          li.menu-item.menu-item__projects Проекты
+          li.menu-item
+            a.menu-item__link(href='/#tasks_for-me') Задачи для меня
+          li.menu-item
+            a.menu-item__link(href='/#knowledge_base') База знаний
+          li.menu-item
+            a.menu-item__link(href='/#tasks') Все задачи
+          li.menu-item
+            a.menu-item__link(href='/#viewed') Просмотренные
+      .header-l__nav--hide
+        span
+        span
+        span
+    .header-r
+      nav.header-r__nav
+        ul.menu.header-r__nav-menu
+          li.menu-item.menu-item__favorite
+          li.menu-item.menu-item__notify
+          li.menu-item.menu-item__user
+            .user-avatar
+
+    include ../projects/projects
+    include ../user/user

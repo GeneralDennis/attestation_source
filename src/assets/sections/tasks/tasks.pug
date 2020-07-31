@@ -1,0 +1,35 @@
+h1.title
+  | Мои задачи
+.flex
+  .tasks-container
+    include ../task-block/task-block
+    include ../task-block/task-block
+    include ../task-block/task-block
+    include ../task-block/task-block
+    include ../task-block/task-block
+    button.tasks-button Загрузить еще
+
+  aside.aside.aside-tasks
+    .aside-filter
+      .aside-filter__header
+        | Сортировать:
+        a.aside-filter__link по дате
+
+      .aside-filter__main
+        .aside-filter__item.aside-filter__item--z1
+          | Проект
+          include ../filter-content/filter-content
+        .aside-filter__item.aside-filter__item--z2
+          | Статус
+          include ../filter-content/filter-content
+        .aside-filter__item.aside-filter__item--z3.aside-filter__item--disabled
+          | Приоритет
+          include ../filter-content/filter-content
+        .aside-filter__item.aside-filter__item--z4
+          | Автор
+          include ../filter-content/filter-content
+        .aside-filter__item.aside-filter__item--z5
+          | Участие
+          include ../filter-content/filter-content
+      
+    button.aside-filter__button.tasks-button Очистить фильтр

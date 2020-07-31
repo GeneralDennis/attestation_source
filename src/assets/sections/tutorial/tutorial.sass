@@ -1,0 +1,219 @@
+.section
+  max-width: 880px
+  width: 100%
+  margin-right: 20px
+  +media(1110px)
+    .article
+      width: 100%
+
+.article
+  width: 100%
+  +media(1240px)
+    width: 705px
+  // +media(1110px)
+  //   width: 100% !important
+
+  &-figure
+    margin-top: 36px
+    margin-bottom: 36px
+    border-radius: 5px
+    overflow: hidden
+
+  &-text
+    display: block
+    margin-bottom: 20px
+    font-size: 17px
+    line-height: 29px
+    letter-spacing: -0.6px;
+    color: #212121
+
+    &--s
+      font-size: 24px
+      line-height: 38px
+      letter-spacing: 0px
+      color: #74777D
+    &--ls
+      letter-spacing: 0px
+
+  &-image
+    height: 420px
+    background: url('/assets/sections/images/fig.png') no-repeat
+    +media(1260px)
+      background-size: cover
+  &-caption
+    padding: 14px 18px 15px
+    font-size: 14px
+    line-height: 21px
+    text-align: center
+    color: #212121
+    background: #fff
+
+  &-subtitle
+    margin-bottom: 14px
+    font-size: 17px
+    font-weight: bold
+    line-height: 28px
+    letter-spacing: 0.6px
+    color: #212121
+
+
+  &-list
+    padding-left: 22px
+    font-size: 17px
+    line-height: 29px
+    color: #212121
+    &--pl20
+      padding-left: 20px
+    &__item
+      position: relative
+      margin-left: 15px
+      margin-bottom: 11px
+      font-style: normal
+      font-weight: normal
+      &--ul
+        &::before
+          position: absolute
+          width: 5px
+          left: -36px
+          display: inline-block
+          content: '—'
+          font-size: 11px
+      &--ol
+        list-style-type: decimal
+        list-style-position: outside
+        padding-left: 17px
+        margin-bottom: 12px
+      &--lh
+        line-height: 24px
+
+.tutorials
+  margin-bottom: 43px
+
+  &-title
+    margin-bottom: 24px
+    font-weight: bold
+    font-size: 37px
+    line-height: 43px
+    color: #212121 
+
+.general-info
+  margin-bottom: 35px
+  &__title
+    margin-bottom: 26px
+    font-size: 26px
+    font-weight: bold
+    line-height: 31px
+    color: #212121
+    &--mt44
+      margin-top: 44px
+      font-size: 27px
+      letter-spacing: -0.3px
+
+.video-lessons
+  margin-bottom: 70px
+  &__title
+    font-weight: bold
+    font-size: 26px
+    line-height: 37px
+    margin-bottom: 24px
+    color: #212121
+
+  &__container
+    display: grid
+    grid-template-columns: repeat( 3,auto )
+    grid-template-rows: auto auto
+    grid-gap: 20px
+    +media(1000px)
+      grid-template-columns: repeat( 2,auto )
+      grid-template-rows: auto auto auto
+      grid-column-gap: 30px
+    +media(700px)
+      display: block
+
+.video-lesson
+  position: relative
+  border: 1px solid #CDD3DB
+  border-radius: 5px;
+  background-color: #FFF
+  overflow: hidden
+
+  +media(700px)
+    width: 80%
+    margin: 20px auto
+
+
+  &__video
+    width: 100%
+    border-radius: inherit
+    object-fit: cover
+
+  &__controls
+    position: absolute
+    width: 50px
+    height: 20px
+    cursor: pointer
+    border: 1px solid #000
+
+
+  &__timer
+    position: absolute
+    max-width: 45px
+    padding: 2px 5px
+    border-radius: 2px
+    top: 125px
+    left: 10px
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff
+    font-size: 14px
+    line-height: 17px
+    +media(1000px)
+      top: 50%
+
+  &__caption
+    min-height: 80px
+    padding: 10px 15px
+    font-weight: bold
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.3px
+    color: #212121
+    background: #fff
+
+#play-btn1, #play-btn2, #play-btn3, #play-btn4, #play-btn5, #play-btn6
+  position: absolute
+  height: 60px
+  width: 60px
+  top: calc( 156px / 2 - 30px )
+  left: calc( (278px / 2) - 30px )
+  border-radius: 50%
+  border: none
+  background: url('/assets/sections/images/play-butt.svg') no-repeat 56% 50%, rgba(0, 0, 0, 0.5)
+  +media(1000px)
+    top: 26%
+    left: 42%
+
+.hide
+  display: none
+.aside
+  max-width: 350px
+  width: 100%
+  &__item
+    padding: 18px 30px
+    font-size: 15px
+    line-height: 18px
+    color: #212121
+    border-bottom: 1px solid #CDD3DB
+    cursor: pointer
+
+    &:last-child
+      border-bottom: none
+
+    &--active
+      font-weight: 700
+      background: #fff
+      border-bottom: none
+      letter-spacing: 0.5px
+      border-radius: 5px
+  &-tutorial
+    +media(1110px)
+      display: none

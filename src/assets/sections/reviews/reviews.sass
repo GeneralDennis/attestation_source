@@ -1,0 +1,114 @@
+@import "../../sass/utils/mixins"
+
+.reviews
+  width: 100%
+  margin-top: 69px
+
+  &-title
+    margin-bottom: 32px
+    font-weight: bold
+    font-size: 35px
+    line-height: 43px
+    letter-spacing: 1px
+    color: #000
+  &-footer
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+    +media(550px)
+      flex-direction: column
+
+  &-form
+    &__text
+      position: relative
+
+    &__textarea
+      width: 100%
+      min-height: 180px
+      padding: 25px
+      border-radius: 5px
+      border: 1px solid #CDD3DB
+
+      &-placeholder
+        position: absolute
+        top: 33px
+        left: 25px
+        font-size: 17px
+        color: #000000
+        pointer-events: none
+        transform: translateY(-50%)
+        transition: top 0.3s, font-size 0.3s
+        font-size: 17px
+        line-height: 29px
+        opacity: 0.5
+
+        &--active
+          top: 23px
+          font-size: 13px
+          line-height: 1
+
+      &:focus
+
+        + .reviews-form__textarea-placeholder
+          font-size: 13px
+          line-height: 13px
+          top: 15px
+    &__input
+      display: none
+
+    &__file
+      display: flex
+      align-items: center
+
+    &__label
+      display: block
+      height: 46px
+      width: 46px
+      margin-right: 16px
+      border-radius: 50%
+      background: url('/assets/sections/images/clip.svg') no-repeat 50% 50% , #fff
+      &--plus
+        background: url('/assets/sections/images/green-plus.svg') no-repeat 50% 50% ,#E5E5E5
+        border: 1px solid #CDD3DB
+
+    &__placeholder
+      display: none
+      margin-bottom: 6px
+      padding-top: 3px
+      font-size: 15px
+      line-height: 18px
+      color: #212121
+      &--more
+        margin-bottom: 0
+      &--show
+        display: block
+
+    &__explain-text
+      display: block
+      margin-top: 4px
+      font-size: 13px
+      line-height: 15px
+      color: #000000
+      opacity: 0.5
+
+    &__button
+      padding: 18px 32px 20px 34px
+      color: #fff
+      background-color: #0066FF
+      border-radius: 40px
+      border: none
+      font-weight: 700
+      letter-spacing: 0.5px
+      font-size: 15px
+      line-height: 18px
+      +media(550px)
+        padding: 10px
+        font-size: 12px
+        line-height: 14px
+        border-radius: 20px
+
+
+.form-files
+  padding-top: 6px
+  +media(550px)
+    margin-bottom: 15px

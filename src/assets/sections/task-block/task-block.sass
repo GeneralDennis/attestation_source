@@ -1,0 +1,250 @@
+@import "../../sass/utils/mixins"
+
+.task-block
+  display: flex
+  justify-content: space-between
+  padding: 19px 29px 23px 30px
+  margin-bottom: 2px
+  background: #fff
+  +media(1024px)
+    flex-direction: column
+    width: 100%
+    +media(915px)
+      width: calc(33.33% - 20px)
+      margin: 0 10px 20px
+      padding: 15px
+    +media(780px)
+      width: 100%
+      margin-left: 0
+      padding: 20px 40px
+
+  &__title
+    margin-bottom: 12px
+    font-size: 15px
+    line-height: 18px
+    color: #212121
+    +media(915px)
+      text-align: center
+
+    span
+      font-size: 15px
+      letter-spacing: 0.7px
+      font-weight: bold
+      +media(915px)
+        line-height: 25px
+
+  &__group
+    &--l
+      width: 100%
+      +media(1024px)
+        width: 100%
+        order: 2
+    &--r
+      padding-top: 13px
+      +media(1024px)
+        padding-top: 0
+        margin-bottom: 10px
+
+    &-select
+      display: flex
+      // justify-content: space-between
+      position: relative
+      // width: 705px
+      +media(915px)
+        flex-direction: column
+        width: 100%
+    &-actions
+      color: #93979B
+      margin-left: 10px
+      +media(1024px)
+        display: flex
+        justify-content: space-between
+      +media(915px)
+        flex-direction: column
+
+.group-actions
+  &__date
+    margin-bottom: 19px
+    font-size: 11px
+    line-height: 15px
+    text-align: end
+    +media(1024px)
+      margin-bottom: 0
+      font-size: 15px
+    +media(915px)
+      margin-bottom: 15px
+  &__actions
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding-right: 27px
+    &--message
+      margin-right: 45px
+      &::after
+        position: absolute
+        content: ''
+        width: 17px
+        height: 15px
+        top: 0px
+        left: 17px
+        background: url('/assets/sections/images/msg.svg') no-repeat
+    &--favorites
+      &::after
+        position: absolute
+        content: ''
+        width: 17px
+        height: 15px
+        top: 0px
+        right: 0px
+        background: url('/assets/sections/images/star-sm.svg') no-repeat
+
+.js-progress, .js-developer, .js-prior
+  position: relative
+  // max-width: 225px
+  width: 100%
+  // margin-right: 10px
+  +media(915px)
+    margin-bottom: 10px
+  +media(780px)
+    max-width: none
+    width: 90%
+    margin: 10px auto
+.js-progress
+  margin-right: 10px
+  .select-list
+    z-index: 12
+.js-developer
+  margin-right: 10px
+  .select-list
+    z-index: 11
+.js-prior
+  margin-right: 25px
+  .select-list
+    z-index: 10
+.js-prior
+  +media(915px)
+    .select-list
+      top: 35px
+.select-list
+  display: none
+  position: absolute
+  width: 100%
+  height: 33px
+  top: 35px
+  z-index: 5
+  +media(700px)
+    max-width: none
+    width: 100%
+
+.select
+  // max-width: 225px
+  width: 100%
+  min-height: 33px
+  position: relative
+  padding: 6px 20px 7px 46px
+  font-size: 13px
+  line-height: 16px
+  cursor: pointer
+  +media(780px)
+    max-width: 600px
+    width: 100%
+  &:hover
+    filter: brightness(0.8)
+
+  &::before
+    position: absolute
+    content: ''
+    width: 17px
+    height: 13px
+    top: 7px
+    left: 20px
+  &::after
+    position: absolute
+    content: ''
+    width: 11px
+    height: 7px
+    top: 11px
+    right: 19px
+    transition: transform 0.5s
+
+  &__selected
+    margin-right: 10px
+    border-radius: 5px
+    cursor: pointer
+    p
+      width: 78%
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+    &--active
+      &::after
+        transform: rotate(180deg)
+
+    &--progress
+      background: #D9F5E6
+      color: #32C979
+
+      &::before
+        background: url('/assets/sections/images/shuttle.svg') no-repeat
+
+      &::after
+        background: url('/assets/sections/images/arrow-green.svg') no-repeat
+
+    &--developer
+      padding-left: 44px
+      background: #F1F3F5
+      color: #93979B
+
+      &::before
+        top: 7px
+        background: url('/assets/sections/images/dev.svg') no-repeat
+
+      &::after
+        background: url('/assets/sections/images/arrow-gray.svg') no-repeat
+    &--prior
+      padding-left: 39px
+      background: #F9E6D9
+      color: #FF8330
+      &::before
+        top: 6px
+        left: 19px
+        height: 15px
+        background: url('/assets/sections/images/fire.svg') no-repeat
+
+      &::after
+        background: url('/assets/sections/images/arrow-orange.svg') no-repeat
+
+  &__in-progress
+    background: #D9F5E6
+    color: #32C979
+    &::before
+      background: url('/assets/sections/images/shuttle.svg') no-repeat
+
+  &__paused
+    background: #a1887f
+    color: #fff
+    &::before
+      background: url('/assets/sections/images/shuttle.svg') no-repeat
+  &__done
+    background: #00796b
+    color: #fff
+    &::before
+      background: url('/assets/sections/images/shuttle.svg') no-repeat
+  &__new
+    background: #f44336
+    color: #fff
+    &::before
+      background: url('/assets/sections/images/shuttle.svg') no-repeat
+  &__need-review
+    background: #afb42b
+    color: #fff
+    &::before
+      background: url('/assets/sections/images/shuttle.svg') no-repeat
+  &__ok
+    background: #9ccc65
+    color: #fff
+    &::before
+      background: url('/assets/sections/images/shuttle.svg') no-repeat
+
+

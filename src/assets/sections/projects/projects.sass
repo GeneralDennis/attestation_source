@@ -1,0 +1,88 @@
+.projects
+  &-wrapper
+    display: none
+    position: absolute
+    top: 85px
+    left: 80px
+    width: 350px
+    height: 325px
+    padding-right: 0
+    padding-bottom: 30px
+    border: 1px solid #CDD3DB
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    background: #fff
+    z-index: 15
+    &::before
+      content: ''
+      position: absolute
+      height: 15px
+      width: 26px
+      top: -13px
+      right: 104px
+      background: url('/assets/sections/images/triangle.svg') no-repeat
+
+
+  &-items
+    height: inherit
+    padding: 28px 25px 0 25px
+    overflow: overlay
+
+    &::after
+      position: absolute
+      left: 0
+      bottom: -2px
+      content: ''
+      width: 100%
+      height: 76px
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+    &::-webkit-scrollbar
+      width: 4px
+    &::-webkit-scrollbar-thumb
+      width: 4px
+      height: 80px
+      border-radius: 5px
+      background: #93979B
+      outline: 4px solid #93979B
+
+  &-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 13px
+
+    &__star
+      height: 18px
+      width: 21px
+      margin-right: 9px
+      margin-top: -8px
+      background: url('/assets/sections/images/star2-empty.svg') no-repeat
+      cursor: pointer
+      &--active
+        background: url('/assets/sections/images/star2-full.svg') no-repeat
+    &__text
+      font-size: 14px
+      line-height: 18px
+      opacity: 0.8
+    &__block
+      min-height: 27px
+      min-width: 37px
+      padding: 3px 0
+      margin-right: 2px
+      border: 1px solid #CDD3DB
+      border-radius: 5px
+      text-align: center
+      color: #93979B
+      font-size: 14px
+      line-height: 17px
+      &--active
+        background: #0066FF
+        color: #fff
+      &:last-child
+        margin-right: 0
+.items
+  &-l
+    display: flex
+    align-items: center
+  &-r
+    display: flex
