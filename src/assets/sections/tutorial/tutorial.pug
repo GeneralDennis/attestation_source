@@ -1,4 +1,4 @@
-.flex
+.flex.js-aside-container
   section.section
     article.article.tutorials
       h2.tutorials-title Краткое обучение
@@ -26,21 +26,21 @@
           | Выявить высоко-потенциальных руководителей Банка для дальнейшего карьерного развития.
       h2.general-info__title.general-info__title--mt44 Для чего это нужно?
       ol.article-list.article-list--pl20
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Команда и управление людьми;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Побуждение, мотивирование подчиненных и коллег к участию в улучшениях;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Эффективное управление людьми;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Определение факторов, влияющих на вовлеченность в коллективе использование управленческих инструментов / рычагов влияния на эти факторы; подбор адекватных / убедительных тезисов и аргументов для различных целевых аудиторий влияния; воодушевление людей в личном общении;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Построение эффективных команд, лидерство и личная эффективность;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Принятие на себя лидерства и выбор стиля лидерства;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Фиксация и анализ своих эмоций с целью повышения эффективности профессиональной деятельности;
-        li.article-.article-list__item--ol
+        li.article-list__item--ol
           | Навык постоянного личностного развития,
     article.article.video-lessons
       h2.video-lessons__title Видео-уроки
@@ -49,36 +49,42 @@
           video#video1.video-lesson__video(width="100%" height="100%" poster="/assets/sections/images/poster1.png")
             source(src="/assets/sections/tutorial/mops.mp4")
           #play-btn1.video-lesson__controls
+          #pause-btn1.video-lesson__controls.hide
           .video-lesson__timer 10:40
           .video-lesson__caption Команда и управление людьми
         .video-lesson
           video#video2.video-lesson__video(width="100%" height="100%" poster="/assets/sections/images/poster2.png")
             source(src="/assets/sections/tutorial/mops.mp4")
           #play-btn2.video-lesson__controls
+          #pause-btn2.video-lesson__controls.hide
           .video-lesson__timer 10:40
           .video-lesson__caption Мотивирование подчиненных и коллег к участию в улучшениях
         .video-lesson
           video#video3.video-lesson__video(width="100%" height="100%" poster="/assets/sections/images/poster3.png")
             source(src="/assets/sections/tutorial/mops.mp4")
           #play-btn3.video-lesson__controls
+          #pause-btn3.video-lesson__controls.hide
           .video-lesson__timer 10:40
           .video-lesson__caption Навык постоянного личностного развития
         .video-lesson
           video#video4.video-lesson__video(width="100%" height="100%" poster="/assets/sections/images/poster4.png")
             source(src="/assets/sections/tutorial/mops.mp4")
           #play-btn4.video-lesson__controls
+          #pause-btn4.video-lesson__controls.hide
           .video-lesson__timer 10:40
           .video-lesson__caption Принятие на себя лидерства
         .video-lesson
           video#video5.video-lesson__video(width="100%" height="100%" poster="/assets/sections/images/poster5.png")
             source(src="/assets/sections/tutorial/mops.mp4")
           #play-btn5.video-lesson__controls
+          #pause-btn5.video-lesson__controls.hide
           .video-lesson__timer 10:40
           .video-lesson__caption Личная эффективность
         .video-lesson
           video#video6.video-lesson__video(width="100%" height="100%" poster="/assets/sections/images/poster6.png")
             source(src="/assets/sections/tutorial/mops.mp4")
           #play-btn6.video-lesson__controls
+          #pause-btn6.video-lesson__controls.hide
           .video-lesson__timer 10:40
           .video-lesson__caption Факторы влияющие на вовлеченность в коллективе
     article.article.reviews
@@ -86,7 +92,7 @@
       include ../reviews/reviews
 
   aside.aside.aside-tutorial.js-aside-click
-    .aside__item.aside__item--active Краткое обучение
-    .aside__item Общая информация
-    .aside__item Видео-уроки
-    .aside__item Отзывы
+    .aside__item(data-name='tutorial') Краткое обучение
+    .aside__item(data-name='general') Общая информация
+    .aside__item(data-name='video') Видео-уроки
+    .aside__item(data-name='reviews') Отзывы
