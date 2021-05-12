@@ -38,7 +38,7 @@
     "select2": "^4.0.13",
     "simplebar": "^5.0.7",
     "style-loader": "^1.0.0",
-    "swiper": "^5.3.1",
+    "swiper": "^6.5.1",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
